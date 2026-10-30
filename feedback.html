@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Обратная связь</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<a href="index.html">Главная</a>
+<a href="login.html">Вход</a>
+</header>
+
+<main>
+<h1>Форма обратной связи</h1>
+
+<form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+<label for="fio">ФИО</label>
+<input type="text" id="fio" name="fio" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<p>Откуда узнали о нас:</p>
+<label class="inline"><input type="radio" name="source" value="friends" checked> От знакомых</label>
+<label class="inline"><input type="radio" name="source" value="internet"> Из интернета</label>
+<label class="inline"><input type="radio" name="source" value="ads"> Из рекламы</label>
+
+<label for="type">Тип обращения</label>
+<select id="type" name="type">
+<option value="complaint">Жалоба</option>
+<option value="suggestion">Предложение</option>
+</select>
+
+<label for="message">Текст сообщения</label>
+<textarea id="message" name="message" rows="6" required></textarea>
+
+<label for="file">Вложение</label>
+<input type="file" id="file" name="file">
+
+<label class="inline">
+<input type="checkbox" name="agree" required> Даю согласие на обработку персональных данных
+</label>
+
+<button type="submit">Отправить</button>
+
+</form>
+</main>
+
+</body>
+</html>
